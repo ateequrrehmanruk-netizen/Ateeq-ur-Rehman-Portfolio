@@ -257,44 +257,8 @@
 
     <div class="projects__grid">
       <article class="project card card--glow">
-        <div class="project__art project__art--calorial" aria-hidden="true">
-          <svg viewBox="0 0 600 320" role="presentation">
-            <defs>
-              <linearGradient id="gCal" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#38d68f" stop-opacity=".9"/>
-                <stop offset="1" stop-color="#0a6b46" stop-opacity=".12"/>
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#gCal)" stroke-width="1.2" opacity=".85">
-              <rect x="35" y="78" width="86" height="152" rx="14"/>
-              <rect x="141" y="78" width="86" height="152" rx="14"/>
-              <rect x="247" y="62" width="106" height="184" rx="16"/>
-              <rect x="373" y="78" width="86" height="152" rx="14"/>
-              <rect x="479" y="78" width="86" height="152" rx="14"/>
-            </g>
-            <rect x="247" y="62" width="106" height="184" rx="16" fill="url(#gCal)" opacity=".18"/>
-            <g fill="none" stroke="#c8ffe4" stroke-width="1.4" opacity=".55">
-              <path d="M52 108h52M52 122h36M52 136h44"/>
-              <circle cx="184" cy="118" r="16"/>
-              <path d="M166 152h36M166 162h24"/>
-              <path d="M395 112h42M395 126h28M395 140h34"/>
-              <path d="M486 112h52M486 126h36"/>
-            </g>
-            <circle cx="300" cy="120" r="24" fill="none" stroke="#38d68f" stroke-width="1.5"/>
-            <circle cx="300" cy="120" r="9" fill="#38d68f" opacity=".35"/>
-            <text x="300" y="190" text-anchor="middle" fill="#c8ffe4" font-family="monospace" font-size="13" letter-spacing="2">412 KCAL</text>
-            <path d="M266 206h68" stroke="#38d68f" stroke-width="2" opacity=".45"/>
-            <g fill="none" stroke="#38d68f" stroke-width="1.5">
-              <path d="M262 88h-8v8M338 88h8v8"/>
-            </g>
-            <g fill="#38d68f" opacity=".5">
-              <rect x="492" y="158" width="6" height="18"/>
-              <rect x="503" y="150" width="6" height="26"/>
-              <rect x="514" y="140" width="6" height="36"/>
-            </g>
-            <circle cx="184" cy="190" r="4" fill="#38d68f"/>
-            <text x="44" y="308" fill="#5f7d70" font-family="monospace" font-size="11" letter-spacing="3">CALORIAL / FOODPK-50 / 96.0% DISH ACCURACY</text>
-          </svg>
+        <div class="project__art project__art--shot">
+          <img src="images/FYP.png" alt="Calorial app screens: home dashboard, dish preview with portion size, AI nutrition result, human-in-the-loop correction and meal history" />
         </div>
         <div class="project__body">
           <div class="project__meta">
@@ -312,6 +276,21 @@
             <li>Reduced per-gram calorie error by 41% (MAE 0.207 → 0.122, R² 0.92) using Focal Loss, label smoothing, cosine LR with warmup and EMA.</li>
             <li>Shipped Calorial as a React Native app on a Flask API in Docker, with portion-size input and a human-in-the-loop correction flow.</li>
           </ul>
+          <figure class="project__figure">
+            <img
+              src="images/Final-Year-Project.png"
+              alt="Scatter plots comparing predicted and actual calories per gram for ResNet-50, EfficientNet-B0 and Inception-v3"
+            />
+            <figcaption>
+              <strong>Backbone selection.</strong> Each scatter plot compares
+              predicted against actual kcal per gram for three candidate backbones
+              under identical baseline settings. ResNet-50 tracked the ideal line
+              most closely (MAE 0.207, R² 0.86) and was chosen for the final model;
+              EfficientNet-B0 came close (MAE 0.235, R² 0.83), while Inception-v3
+              could not handle the regression task (MAE 0.796, R² −0.50).
+            </figcaption>
+          </figure>
+          <p class="project__label">Tools</p>
           <div class="tags">
             <span>PyTorch</span><span>ResNet-50</span><span>Computer Vision</span><span>Flask</span><span>Docker</span><span>React Native</span>
           </div>
